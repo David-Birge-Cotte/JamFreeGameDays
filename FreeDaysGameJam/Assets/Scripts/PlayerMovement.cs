@@ -51,8 +51,12 @@ public class PlayerMovement : MonoBehaviour {
 		
 		if(Input.GetKey(KeyCode.Joystick1Button0) || pos == PositionLayer.MIDDLE)
 		{
-			if(_isGoingUp == false)
+			if(_isGoingUp == false && timerDown == 1){
 				_isAttacking = true;
+			}
+			if(_isAttacking == false){
+				timerDown = 0;
+			}
 		}
 
 		if(pos == PositionLayer.DOWN)
