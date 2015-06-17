@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour {
 	public float Ymin = -9.3f;
 	public float Ymax = 9.3f;
 
+	public float YAttack = -2f;
+
+
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
 	
@@ -21,25 +24,27 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update () 
 	{
-		#region MOVEMENT
-		//reset à chaque frame
-		_velocity = Vector2.zero;
+		_velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-		if(Input.GetAxis("Horizontal") > 0 && transform.position.x < Xmax){
-			_velocity = new Vector2(Input.GetAxis("Horizontal"), _velocity.y);
-		} else if(Input.GetAxis("Horizontal") < 0 && transform.position.x > Xmin){
-			_velocity = new Vector2(Input.GetAxis("Horizontal"), _velocity.y);
+		if(Input.GetKey(KeyCode.Joystick1Button0) || transform.position.y < YAttack)
+		{
+			Attack();
 		}
 
-		if(Input.GetAxis("Vertical") > 0 && transform.position.y < Ymax){
-			_velocity = new Vector2(_velocity.x, Input.GetAxis("Vertical"));
-		} else if(Input.GetAxis("Vertical") < 0 && transform.position.y > Ymin){
-			_velocity = new Vector2(_velocity.x, Input.GetAxis("Vertical"));
-		}
+		if(_velocity.x > 0 && transform.position.x >= Xmax)
+			_velocity.x = 0;
+		else if(_velocity.x < 0 && transform.position.x <= Xmin)
+			_velocity.x = 0;
+
+		if(_velocity.y > 0 && transform.position.y >= Ymax)
+			_velocity.y = 0;
+		else if(_velocity.y < 0 && transform.position.y <= Ymin)
+			_velocity.y = 0;
+
 
 		_velocity *= speed * Time.deltaTime;
 		_rigidbody.velocity = _velocity;
-		#endregion
+
 		/*
 		#region ROTATION
 		Vector2 v = _rigidbody.velocity;
@@ -49,4 +54,28 @@ public class PlayerMovement : MonoBehaviour {
 		#endregion
 		*/
 	}
+
+	void Attack()
+	{
+		_velocity += new Vector2(0, -2);
+	}
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
