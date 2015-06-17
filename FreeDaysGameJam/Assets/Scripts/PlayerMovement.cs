@@ -40,13 +40,13 @@ public class PlayerMovement : MonoBehaviour {
 		_velocity *= speed * Time.deltaTime;
 		_rigidbody.velocity = _velocity;
 		#endregion
-
+		/*
 		#region ROTATION
 		Vector2 v = _rigidbody.velocity;
 		float angle = Mathf.Atan2(v.y, Mathf.Abs(v.x)) * Mathf.Rad2Deg;
 
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		#endregion
-
+		*/
 	}
 }
