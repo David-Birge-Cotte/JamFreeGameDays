@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+	public int points;
+
+
 	public float speed = 500;
 
 	public float Xmin = -17f;
@@ -12,14 +15,14 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float YAttack = 5f;
 	public float YStopZone = -5f;
+	public float timerDown = 1f;
 
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
 	private bool _isAttacking = false;
 	private bool _isGoingUp = false;
-	private float acceleration;
+	private float _acceleration;
 
-	public float timerDown = 1f;
 
 	private enum PositionLayer{
 		UP,
@@ -28,7 +31,7 @@ public class PlayerMovement : MonoBehaviour {
 		ERROR
 	}
 
-	private PositionLayer pos;
+	private PositionLayer _pos;
 
 	
 	void Start () 
@@ -40,16 +43,16 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 		if(transform.position.y > YAttack)
-			pos = PositionLayer.UP;
+			_pos = PositionLayer.UP;
 		else if(transform.position.y < YAttack && transform.position.y > YStopZone)
-			pos = PositionLayer.MIDDLE;
+			_pos = PositionLayer.MIDDLE;
 		else if(transform.position.y < YStopZone)
-			pos = PositionLayer.DOWN;
+			_pos = PositionLayer.DOWN;
 		else
-			pos = PositionLayer.ERROR;
+			_pos = PositionLayer.ERROR;
 
 		
-		if(Input.GetKey(KeyCode.Joystick1Button0) || pos == PositionLayer.MIDDLE)
+		if(Input.GetKey(KeyCode.Joystick1Button0) || _pos == PositionLayer.MIDDLE)
 		{
 			if(_isGoingUp == false && timerDown == 1){
 				_isAttacking = true;
@@ -59,7 +62,7 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}
 
-		if(pos == PositionLayer.DOWN)
+		if(_pos == PositionLayer.DOWN)
 		{
 			_isAttacking = false;
 			timerDown -= Time.deltaTime;
@@ -70,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 			timerDown = 1f;
 		}
 
-		if(pos == PositionLayer.UP){
+		if(_pos == PositionLayer.UP){
 			_isGoingUp = false;
 		}
 
@@ -78,12 +81,12 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			_velocity = new Vector2(0, -2);
 
-			acceleration += Time.deltaTime;
-			_velocity += new Vector2(0, -acceleration);
+			_acceleration += Time.deltaTime;
+			_velocity += new Vector2(0, -_acceleration);
 		} else 
 		{
 			_velocity = Vector2.zero;
-			acceleration = 0;
+			_acceleration = 0;
 		}
 
 		if(_isGoingUp){
@@ -107,6 +110,11 @@ public class PlayerMovement : MonoBehaviour {
 		_velocity *= speed * Time.deltaTime;
 		_rigidbody.velocity = _velocity;
 
+	}
+
+	void GetPoints(int pts)
+	{
+		points += pts;
 	}
 }
 
