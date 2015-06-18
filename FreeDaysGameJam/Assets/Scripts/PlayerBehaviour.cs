@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerBehaviour : MonoBehaviour {
 
 	public int points;
 
@@ -36,6 +36,15 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void Start () 
 	{
+		Color newColor = new Color();
+
+		newColor.r = Random.Range(0.5f, 1f);
+		newColor.g = Random.Range(0.5f, 1f);
+		newColor.b = Random.Range(0.5f, 1f);
+		newColor.a = 1;
+
+		transform.GetComponent<SpriteRenderer>().color = newColor;
+
 		_rigidbody = transform.GetComponent<Rigidbody2D>();
 		_velocity = Vector2.zero;
 	}
