@@ -67,6 +67,11 @@ public class PlayerBehaviour : NetworkBehaviour {
 
 	void Update () 
 	{
+		if(Input.GetKey(KeyCode.A)){
+			GameObject.Find("ManagerAutre").GetComponent<Manager>().CmdSetTest(42);
+		}
+
+
 		if(transform.position.y > YAttack)
 			_pos = PositionLayer.UP;
 		else if(transform.position.y < YAttack && transform.position.y > YStopZone)

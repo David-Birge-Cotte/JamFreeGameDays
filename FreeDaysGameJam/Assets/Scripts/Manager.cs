@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Manager : MonoBehaviour {
+public class Manager : NetworkBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	[SyncVar]
+	public int test;
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	//[Command]
+	public void CmdSetTest(int i){
+		test = i;
 	}
 }
