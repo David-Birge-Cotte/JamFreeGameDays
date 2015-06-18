@@ -306,14 +306,14 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &498826008
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 498826007}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &498826009
 Behaviour:
   m_ObjectHideFlags: 0
@@ -372,7 +372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &622659302
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ Transform:
   - {fileID: 1951114915}
   - {fileID: 1996684420}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &735586026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
       propertyPath: m_Name
-      value: ennemy (2)
+      value: ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
       propertyPath: m_IsActive
@@ -646,7 +646,7 @@ Transform:
   - {fileID: 1936062101}
   - {fileID: 266144757}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1335391437
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +657,6 @@ GameObject:
   - 4: {fileID: 1335391440}
   - 114: {fileID: 1335391439}
   - 114: {fileID: 1335391438}
-  - 114: {fileID: 1335391441}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -746,18 +745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &1335391441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1335391437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0a5c9b0bc0b11449d98115c69d1b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_RootOrder: 5
 --- !u!1 &1370664997
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
       propertyPath: m_Name
-      value: ennemy (1)
+      value: ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
       propertyPath: m_IsActive
@@ -1110,6 +1098,79 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2002921313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2002921316}
+  - 114: {fileID: 2002921315}
+  - 114: {fileID: 2002921314}
+  m_Layer: 0
+  m_Name: ManagerAutre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2002921314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002921313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0a5c9b0bc0b11449d98115c69d1b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 0
+--- !u!114 &2002921315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002921313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!4 &2002921316
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002921313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &2028592440
 GameObject:
   m_ObjectHideFlags: 0
