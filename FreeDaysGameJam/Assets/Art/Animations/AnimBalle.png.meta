@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: 7b119a4e60270ce438acc2bf7d3c1943
-timeCreated: 1434626889
+timeCreated: 1434633103
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: AnimBalle_0
+    21300002: AnimBalle_1
+    21300004: AnimBalle_2
+    21300006: AnimBalle_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -37,7 +41,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +52,47 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: AnimBalle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 147
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimBalle_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 147
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimBalle_2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 0
+        width: 147
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AnimBalle_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

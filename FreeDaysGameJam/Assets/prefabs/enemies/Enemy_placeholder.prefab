@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11460666}
   - 114: {fileID: 11488694}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_placeholder
   m_TagString: ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a00f53dacd3b419dc69b485107adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemyType: 0
+  pointsReceived: 150
 --- !u!114 &11463240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d66d1bcc83996e4e9c3f6a7b6be3038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80cb0299be68f75428de31c278149aea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -171,7 +171,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80cb0299be68f75428de31c278149aea,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: pointsReceived
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144876}
