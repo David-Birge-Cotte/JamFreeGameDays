@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class CameraBehaviour : MonoBehaviour {
-
+	
 	public  GameObject target;
 	
-	// Update is called once per frame
+	void Start(){
+		transform.position = new Vector3(0, 5, -10);
+	}
+	
 	void Update () 
 	{
 		float Y = target.transform.position.y;
-
-		transform.position = new Vector3(0, Y, -10);
+		
+		if(Y < 5 && Y > -5)
+			transform.position = new Vector3(0, Y, -10);
 	}
 }
