@@ -162,6 +162,7 @@ MonoBehaviour:
   YStopZone: -5
   timerDown: 1
   localSigne: {fileID: 114588}
+  Cam: {fileID: 114790, guid: 61adac881583d0543970c04c111fa482, type: 2}
 --- !u!114 &11498302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +296,10 @@ Prefab:
       propertyPath: localSigne
       value: 
       objectReference: {fileID: 114588}
+    - target: {fileID: 0}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 114790, guid: 61adac881583d0543970c04c111fa482, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103684}

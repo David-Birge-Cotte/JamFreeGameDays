@@ -18,6 +18,7 @@ public class PlayerBehaviour : NetworkBehaviour {
 	public float YStopZone = -5f;
 	public float timerDown = 1f;
 	public GameObject localSigne;
+	public GameObject Cam;
 
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
@@ -42,6 +43,9 @@ public class PlayerBehaviour : NetworkBehaviour {
 	{
 		if(isLocalPlayer){
 			localSigne.SetActive(true);
+			Camera.main.enabled = false;
+			GameObject _cam = (GameObject)Instantiate(Cam, Vector3.zero, Quaternion.identity);
+			_cam.GetComponent<CameraBehaviour>().target = transform.gameObject;
 		}
 
 
