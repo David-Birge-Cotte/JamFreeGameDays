@@ -8,7 +8,14 @@ public class PlayerNetwork : NetworkBehaviour {
 	private Vector3 syncPos;
 	
 	public float lerpRate = 15;
-	
+
+	void Start(){
+		if(isLocalPlayer){
+			GetComponent<PlayerBehaviour>().enabled = true;
+		}
+	}
+
+
 	void FixedUpdate()
 	{
 		TransmitPosition();
@@ -32,6 +39,10 @@ public class PlayerNetwork : NetworkBehaviour {
 	[ClientCallback]
 	void TransmitPosition()
 	{
-		CmdProvidePositionToServer(transform.position);
+		if(isLocalPlayer)
+		{
+			CmdProvidePositionToServer(transform.position);
+		}
+
 	}
 }
