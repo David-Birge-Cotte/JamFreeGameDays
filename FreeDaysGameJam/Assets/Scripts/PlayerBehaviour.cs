@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class PlayerBehaviour : MonoBehaviour {
+public class PlayerBehaviour : NetworkBehaviour {
 
 	public int points;
 
@@ -16,12 +17,15 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float YAttack = 5f;
 	public float YStopZone = -5f;
 	public float timerDown = 1f;
+	public GameObject localSigne;
 
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
 	private bool _isAttacking = false;
 	private bool _isGoingUp = false;
 	private float _acceleration;
+	
+	private Animator _anim;
 
 
 	private enum PositionLayer{
@@ -36,6 +40,14 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	void Start () 
 	{
+		if(isLocalPlayer){
+			localSigne.SetActive(true);
+		}
+
+
+
+		_anim = GetComponent<Animator>();
+
 		Color newColor = new Color();
 
 		newColor.r = Random.Range(0.5f, 1f);
@@ -61,15 +73,7 @@ public class PlayerBehaviour : MonoBehaviour {
 			_pos = PositionLayer.ERROR;
 
 		
-		if(Input.GetKey(KeyCode.Joystick1Button0) || _pos == PositionLayer.MIDDLE)
-		{
-			if(_isGoingUp == false && timerDown == 1){
-				_isAttacking = true;
-			}
-			if(_isAttacking == false){
-				timerDown = 0;
-			}
-		}
+
 
 		if(_pos == PositionLayer.DOWN)
 		{
@@ -84,8 +88,19 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		if(_pos == PositionLayer.UP){
 			_isGoingUp = false;
+			_isAttacking = false;
 		}
 
+		if(Input.GetKey(KeyCode.Joystick1Button0) || _pos == PositionLayer.MIDDLE)
+		{
+			if(_isGoingUp == false && timerDown == 1){
+				_isAttacking = true;
+			}
+			if(_isAttacking == false){
+				timerDown = 0;
+			}
+		}
+		
 		if(_isAttacking)
 		{
 			_velocity = new Vector2(0, -2);
@@ -118,6 +133,16 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		_velocity *= speed * Time.deltaTime;
 		_rigidbody.velocity = _velocity;
+
+
+		if(_isAttacking){
+			_anim.SetBool("isAttacking", true);
+			transform.eulerAngles = new Vector3(0, 0, -55f);
+		} else {
+			_anim.SetBool("isAttacking", false);
+			transform.eulerAngles = new Vector3(0, 0, 0);
+		}
+
 
 	}
 
