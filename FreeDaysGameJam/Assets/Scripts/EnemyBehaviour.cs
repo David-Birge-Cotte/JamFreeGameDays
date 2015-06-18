@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnnemyBehaviour : MonoBehaviour {
+public class EnemyBehaviour : MonoBehaviour {
 
-	public enum EnnemyType
+	public enum EnemyType
 	{
 		plagiste,
 		poisson,
@@ -12,7 +12,7 @@ public class EnnemyBehaviour : MonoBehaviour {
 
 	}
 
-	public EnnemyType ennemyType;
+	public EnemyType enemyType;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +29,7 @@ public class EnnemyBehaviour : MonoBehaviour {
 		if (coll.gameObject.tag == "Player") {
 			int pointsReceived = 0;
 
-			switch (ennemyType) {
+			switch (enemyType) {
 			case EnnemyType.plagiste: 
 				pointsReceived = 10;
 				break;

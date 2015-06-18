@@ -1,0 +1,79 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class EnemySpawner : MonoBehaviour {
+
+	// Use this for initialization
+	float spawnTimer;
+	public GameObject[] blocs;
+	public GameObject spawnerSituations;
+
+	private int rand;
+	
+
+	void Awake(){
+		spawnTimer = 0;
+	}
+	
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		spawnTimer += Time.deltaTime;
+		if (spawnTimer > 2) {
+			spawnBloc();
+			spawnTimer = 0;
+		}
+	}
+
+	void spawnBloc()
+	{
+		Instantiate(blocs[Random.Range(0, blocs.Length], spawnerSituations.transform.position, Quaternion.identity);
+	}
+
+
+
+}
+
+
+/*
+ *using UnityEngine;
+using System.Collections;
+ 
+public class Procedural : MonoBehaviour {
+ 
+    public GameObject[] blocs;
+    public GameObject background;
+    public GameObject spawnerBG;
+    public GameObject spawnerSituations;
+ 
+    private int rand;
+ 
+    void Start()
+    {
+        InvokeRepeating("spawnBloc", 0, 3.0f);
+        InvokeRepeating("spawnBG", 0, 17.8f);
+    }
+ 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Background" || other.tag == "PNJ" || other.tag == "Effector" || other.tag == "PickUp")
+        {
+            Destroy(other.gameObject);
+        }
+    }
+ 
+    void spawnBloc()
+    {
+        rand = Random.Range(0, blocs.Length);
+        Instantiate(blocs[rand], spawnerSituations.transform.position, Quaternion.identity);
+    }
+    void spawnBG()
+    {
+        Instantiate(background, spawnerBG.transform.position, Quaternion.identity);
+    }
+} 
+ * 
+ */
