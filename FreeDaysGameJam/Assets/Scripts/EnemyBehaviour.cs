@@ -30,16 +30,16 @@ public class EnemyBehaviour : MonoBehaviour {
 			int pointsReceived = 0;
 
 			switch (enemyType) {
-			case EnnemyType.plagiste: 
+			case EnemyType.plagiste: 
 				pointsReceived = 10;
 				break;
-			case EnnemyType.nageur: 
+			case EnemyType.nageur: 
 				pointsReceived = 15;
-				break;
-			case EnnemyType.poisson: 
+			break;
+				case EnemyType.poisson: 
 				pointsReceived = 5;
 				break;
-			case EnnemyType.requin: 
+			case EnemyType.requin: 
 				pointsReceived = 20;
 				break;	
 			default:
@@ -48,9 +48,5 @@ public class EnemyBehaviour : MonoBehaviour {
 			coll.gameObject.SendMessage ("GetPoints", pointsReceived);
 			Destroy(transform.gameObject);
 		}
-
-			
-
 	}
-
 }
