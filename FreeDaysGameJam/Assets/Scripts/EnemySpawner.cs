@@ -6,7 +6,6 @@ public class EnemySpawner : MonoBehaviour {
 	// Use this for initialization
 	float spawnTimer;
 	public GameObject[] blocs;
-	public GameObject spawnerSituations;
 	
 	private int rand;
 	
@@ -28,6 +27,6 @@ public class EnemySpawner : MonoBehaviour {
 	
 	void SpawnBloc()
 	{
-		Instantiate(blocs[Random.Range(0, blocs.Length)], spawnerSituations.transform.position, Quaternion.identity);
+		Instantiate(blocs[Random.Range(0, blocs.Length)], transform.position, Quaternion.identity);
 	}
 }
