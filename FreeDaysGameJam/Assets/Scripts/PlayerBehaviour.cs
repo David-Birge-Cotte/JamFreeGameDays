@@ -28,6 +28,9 @@ public class PlayerBehaviour : NetworkBehaviour {
 	
 	private Animator _anim;
 
+	public GameObject fienteOutput;
+	public GameObject fiente;
+
 
 	private enum PositionLayer{
 		UP,
@@ -148,6 +151,10 @@ public class PlayerBehaviour : NetworkBehaviour {
 			transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 
+		if(Input.GetKeyDown(KeyCode.Joystick1Button1))
+		{
+			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+		}
 
 	}
 
@@ -155,21 +162,16 @@ public class PlayerBehaviour : NetworkBehaviour {
 	{
 		points += pts;
 	}
+
+	public void HitByFiente(){
+		speed = 50;
+		Invoke("resetSpeed", 5f);
+	}
+
+	void resetSpeed(){
+		speed = 500;
+	}
 }
-
-
-
-/*
-	#region ROTATION
-	Vector2 v = _rigidbody.velocity;
-	float angle = Mathf.Atan2(v.y, Mathf.Abs(v.x)) * Mathf.Rad2Deg;
-
-	transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-	#endregion
-*/
-
-
-
 
 
 

@@ -8,7 +8,7 @@ public class Manager : NetworkBehaviour {
 	public int test;
 	
 
-	//[Command]
+	[Command]
 	public void CmdSetTest(int i){
 		test = i;
 	}

@@ -584,7 +584,7 @@ Transform:
   - {fileID: 1936062101}
   - {fileID: 266144757}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1335391437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,12 +1015,16 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116439607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22c157c6de4887e4bbb6a4d380935397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocs: []
+  blocs:
+  - {fileID: 144876, guid: 675d18ae3bf485045bcc6ba773eddb47, type: 2}
+  - {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
+  - {fileID: 144876, guid: bba3870ba5d89584f8a6fbfe8a112683, type: 2}
+  - {fileID: 144876, guid: fa861880754d79b4c8cb5fdcfe0ab2fe, type: 2}
 --- !u!4 &2116439609
 Transform:
   m_ObjectHideFlags: 0
@@ -1028,11 +1032,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116439607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!95 &2116439610
 Animator:
   serializedVersion: 3
