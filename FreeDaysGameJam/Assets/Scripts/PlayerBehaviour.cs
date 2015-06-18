@@ -43,9 +43,9 @@ public class PlayerBehaviour : NetworkBehaviour {
 	{
 		if(isLocalPlayer){
 			localSigne.SetActive(true);
-			Camera.main.enabled = false;
-			GameObject _cam = (GameObject)Instantiate(Cam, Vector3.zero, Quaternion.identity);
-			_cam.GetComponent<CameraBehaviour>().target = transform.gameObject;
+			//Camera.main.enabled = false;
+			//GameObject _cam = (GameObject)Instantiate(Cam, Vector3.zero, Quaternion.identity);
+			//_cam.GetComponent<CameraBehaviour>().target = transform.gameObject;
 		}
 
 
@@ -67,10 +67,6 @@ public class PlayerBehaviour : NetworkBehaviour {
 
 	void Update () 
 	{
-		if(Input.GetKey(KeyCode.A)){
-			GameObject.Find("ManagerAutre").GetComponent<Manager>().CmdSetTest(42);
-		}
-
 
 		if(transform.position.y > YAttack)
 			_pos = PositionLayer.UP;
