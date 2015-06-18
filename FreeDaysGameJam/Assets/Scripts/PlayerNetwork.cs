@@ -5,12 +5,16 @@ using UnityEngine.Networking;
 public class PlayerNetwork : NetworkBehaviour {
 
 	[SyncVar]
-	private Vector3 syncPos;
+	public Vector3 syncPos;
 	
+
 	public float lerpRate = 15;
 
-	void Start(){
-		if(isLocalPlayer){
+
+	void Start()
+	{
+		if(isLocalPlayer)
+		{
 			GetComponent<PlayerBehaviour>().enabled = true;
 		}
 	}
@@ -43,6 +47,6 @@ public class PlayerNetwork : NetworkBehaviour {
 		{
 			CmdProvidePositionToServer(transform.position);
 		}
-
 	}
+
 }
