@@ -14,6 +14,7 @@ GameObject:
   - 50: {fileID: 5030670}
   - 61: {fileID: 6158914}
   - 114: {fileID: 11496016}
+  - 114: {fileID: 11432442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -62,6 +63,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5.11999989, y: 5.11999989}
+--- !u!114 &11432442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe8c48c0d2278d47bcce04c5ae450fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpRate: 15
 --- !u!114 &11456446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +113,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
@@ -125,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81199781f1ac47b4a8bdf086530194a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
   speed: 500
   Xmin: -17
   Xmax: 17
@@ -194,6 +208,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
