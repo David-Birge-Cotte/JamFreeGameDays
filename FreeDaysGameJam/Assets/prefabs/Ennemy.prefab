@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11430144}
   - 114: {fileID: 11463240}
   - 114: {fileID: 11460666}
+  - 114: {fileID: 11488694}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: ennemy
@@ -126,6 +127,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &11488694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46a228326fac3f43a79ddbf2a09ff66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
 --- !u!212 &21280344
 SpriteRenderer:
   m_ObjectHideFlags: 1
