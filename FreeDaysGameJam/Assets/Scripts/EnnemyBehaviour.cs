@@ -11,6 +11,7 @@ public class EnnemyBehaviour : MonoBehaviour {
 		nageur
 
 	}
+
 	public EnnemyType ennemyType;
 
 	// Use this for initialization
