@@ -196,7 +196,7 @@ GameObject:
   - 114: {fileID: 345691024}
   m_Layer: 0
   m_Name: Cloud01 (1)
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - 212: {fileID: 419928481}
   m_Layer: 0
   m_Name: Sky
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -541,29 +541,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 159264, guid: 427fb836703308540b0f6a778aa697d4, type: 2}
-      propertyPath: m_TagString
-      value: Background
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 427fb836703308540b0f6a778aa697d4, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1092304120 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 159264, guid: 427fb836703308540b0f6a778aa697d4, type: 2}
-  m_PrefabInternal: {fileID: 1092304119}
---- !u!114 &1092304121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1092304120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46a228326fac3f43a79ddbf2a09ff66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -3.5
 --- !u!1001 &1175745200
 Prefab:
   m_ObjectHideFlags: 0
@@ -603,29 +583,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 133080, guid: 4043231d06600d44dad9d3c763eaec75, type: 2}
-      propertyPath: m_TagString
-      value: Background
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4043231d06600d44dad9d3c763eaec75, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1175745201 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 133080, guid: 4043231d06600d44dad9d3c763eaec75, type: 2}
-  m_PrefabInternal: {fileID: 1175745200}
---- !u!114 &1175745202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1175745201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46a228326fac3f43a79ddbf2a09ff66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -3.5
 --- !u!1001 &1203522459
 Prefab:
   m_ObjectHideFlags: 0
@@ -1148,7 +1108,7 @@ GameObject:
   - 114: {fileID: 1951114917}
   m_Layer: 0
   m_Name: Cloud01 (2)
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,7 +1241,7 @@ GameObject:
   - 114: {fileID: 1996684422}
   m_Layer: 0
   m_Name: Cloud01 (3)
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1348,7 +1308,7 @@ GameObject:
   - 114: {fileID: 2028592443}
   m_Layer: 0
   m_Name: Cloud01
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1502,6 +1462,12 @@ MonoBehaviour:
   blocs:
   - {fileID: 144876, guid: 675d18ae3bf485045bcc6ba773eddb47, type: 2}
   - {fileID: 144876, guid: bba3870ba5d89584f8a6fbfe8a112683, type: 2}
+  - {fileID: 144876, guid: 3c4ded18eba0bc546806dd08a9cf5f37, type: 2}
+  - {fileID: 144876, guid: eab993dd86887cf4baf56454e7da88ec, type: 2}
+  - {fileID: 144876, guid: a3f0c32cd2ab6544eb0d4a02878d5c43, type: 2}
+  - {fileID: 144876, guid: 0062fb4d523c183409a348d83cfbaaa4, type: 2}
+  - {fileID: 144876, guid: ffd3b61aa35771040af4c4d3a2f2a851, type: 2}
+  - {fileID: 144876, guid: c1efb9da6a268e54b9e34cc98982dbe3, type: 2}
   - {fileID: 144876, guid: fa861880754d79b4c8cb5fdcfe0ab2fe, type: 2}
 --- !u!4 &2116439609
 Transform:

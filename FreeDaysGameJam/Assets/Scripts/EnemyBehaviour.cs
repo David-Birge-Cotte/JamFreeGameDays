@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		{
 			pointsReceived *= 2;
 			GetComponent<SpriteRenderer>().color = Color.grey;
+			Destroy(other.gameObject);
 		}
 	}
 }

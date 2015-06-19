@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 457862}
   - 212: {fileID: 21228712}
   - 61: {fileID: 6118438}
+  - 114: {fileID: 11456436}
   m_Layer: 0
   m_Name: Beach
   m_TagString: Background
@@ -42,6 +43,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 48.079998, y: 7.11999989}
+--- !u!114 &11456436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46a228326fac3f43a79ddbf2a09ff66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3.5
 --- !u!212 &21228712
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour {
 		{
 			SpawnBloc();
 			spawnTimer = 0;
-			timeNeeded = Random.Range(2, 5);
+			timeNeeded = Random.Range(0.5f, 3);
 		}
 	}
 	
