@@ -7,6 +7,7 @@ TagManager:
   - Fiente
   - ennemy
   - Background
+  - Nuage
   layers:
   - Default
   - TransparentFX

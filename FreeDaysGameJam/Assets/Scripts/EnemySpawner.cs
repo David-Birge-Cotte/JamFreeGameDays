@@ -24,13 +24,13 @@ public class EnemySpawner : MonoBehaviour {
 		{
 			SpawnBloc();
 			spawnTimer = 0;
-			timeNeeded = Random.Range(0.5f, 3);
+			timeNeeded = Random.Range(0.3f, 2.5f);
 		}
 	}
 	
 	void SpawnBloc()
 	{
-		Vector3 pos = new Vector3(transform.position.x, -7, 0);
+		Vector3 pos = new Vector3(transform.position.x, Random.Range(-10, -6), 0);
 		Instantiate(blocs[Random.Range(0, blocs.Length)], pos, Quaternion.identity);
 	}
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f0aaf6787ccd499468a6c1ed6d9ac82f
-timeCreated: 1434706153
+timeCreated: 1434716206
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,7 +63,7 @@ TextureImporter:
         width: 191
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tourist_1
       rect:
@@ -73,17 +73,7 @@ TextureImporter:
         width: 187
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tourist_2
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 113
-        width: 130
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tourist_3
       rect:
@@ -93,7 +83,7 @@ TextureImporter:
         width: 191
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tourist_4
       rect:
@@ -103,7 +93,7 @@ TextureImporter:
         width: 191
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tourist_5
       rect:
@@ -113,7 +103,7 @@ TextureImporter:
         width: 189
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

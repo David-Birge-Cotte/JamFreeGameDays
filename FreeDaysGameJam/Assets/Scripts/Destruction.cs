@@ -12,6 +12,8 @@ public class Destruction : MonoBehaviour {
 		{
 			spawner.SendMessage("SpawnBackground");
 		}
-		Destroy(other.gameObject);
+		if(other.gameObject.tag != "Nuage"){
+			Destroy(other.gameObject);
+		}
 	}
 }
