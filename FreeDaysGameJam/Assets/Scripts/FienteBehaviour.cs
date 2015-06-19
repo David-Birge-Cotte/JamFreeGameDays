@@ -16,10 +16,11 @@ public class FienteBehaviour : MonoBehaviour {
 		_rigid.velocity = new Vector2(-2, _rigid.velocity.y);
 	}
 
-	void OnCollisionEnter2D(Collision2D coll)
+	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "Player"){
 			coll.gameObject.SendMessage("HitByFiente");
+			Destroy(coll.gameObject);
 		}
 	}
 }

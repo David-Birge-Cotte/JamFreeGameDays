@@ -38,15 +38,21 @@ public class PlayerBehaviour : MonoBehaviour {
 		ERROR
 	}
 
-	private PositionLayer _pos;
+	public enum Player{
+		J1,
+		J2,
+		J3,
+		J4
+	}
+	public Player numPlayer;
 
+	private PositionLayer _pos;
 	
 	void Start () 
 	{
-
-
 		_anim = GetComponent<Animator>();
 
+		/*
 		Color newColor = new Color();
 
 		newColor.r = Random.Range(0.5f, 1f);
@@ -55,6 +61,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		newColor.a = 1;
 
 		transform.GetComponent<SpriteRenderer>().color = newColor;
+		 */
 
 		_rigidbody = transform.GetComponent<Rigidbody2D>();
 		_velocity = Vector2.zero;
@@ -116,8 +123,23 @@ public class PlayerBehaviour : MonoBehaviour {
 		if(_isGoingUp){
 			_velocity += new Vector2(0, 2);
 		}
+		switch (numPlayer) {
+		case Player.J1 :
+			_velocity += new Vector2(Input.GetAxis("X_J1"), Input.GetAxis("Y_J1"));
+			break;
+		case Player.J2:
+			_velocity += new Vector2(Input.GetAxis("X_J2"), Input.GetAxis("Y_J2"));
+			break;
+		case Player.J3 :
+			_velocity += new Vector2(Input.GetAxis("X_J3"), Input.GetAxis("Y_J3"));
+			break;
+		case Player.J4:
+			_velocity += new Vector2(Input.GetAxis("X_J4"), Input.GetAxis("Y_J4"));
+			break;
 
-		_velocity += new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		default:
+			break;
+		}
 
 
 		if(_velocity.x > 0 && transform.position.x >= Xmax)
