@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sang: {fileID: 120172, guid: 6324db5fcdc213849878039bf884de81, type: 2}
+  mort: {fileID: 8300000, guid: ef55fa84b89093f45b8fa9cd0c10e2fa, type: 3}
   pointsReceived: 5
 --- !u!114 &11488694
 MonoBehaviour:
@@ -136,6 +137,10 @@ Prefab:
       propertyPath: speed
       value: -3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mort
+      value: 
+      objectReference: {fileID: 8300000, guid: ef55fa84b89093f45b8fa9cd0c10e2fa, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144876}
