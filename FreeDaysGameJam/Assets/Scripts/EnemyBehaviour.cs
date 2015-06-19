@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyBehaviour : MonoBehaviour {
 
 	public GameObject sang;
+	public AudioClip mort;
 
 	public int pointsReceived = 0;
 	
@@ -18,6 +19,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		{
 			coll.gameObject.SendMessage ("GetPoints", pointsReceived);
 			Instantiate(sang, transform.position, Quaternion.identity);
+			Camera.main.GetComponent<AudioSource>().PlayOneShot(mort);
 			Destroy(transform.gameObject);
 		}
 	}

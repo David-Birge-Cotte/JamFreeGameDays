@@ -13,7 +13,7 @@ public class SpawnBackGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		 pos = new Vector3(transform.position.x, -10.7f, 0);
+		 pos = new Vector3(transform.position.x, -9, 0);
 	}
 	
 	// Update is called once per frame
@@ -23,8 +23,6 @@ public class SpawnBackGround : MonoBehaviour {
 
 	void SpawnBackground ()
 	{
-
-
 		if(LastBackGroundIsSea)
 		{
 			Instantiate(Beach, pos, Quaternion.identity);
