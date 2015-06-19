@@ -220,7 +220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NOM DU JEU
+  m_Text: Fous Gone Wild
 --- !u!222 &262288412
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalPosition: {x: -1.67696238, y: 7.40764093, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 482924}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.36000001, y: -1.00999999, z: 0}
+  m_LocalPosition: {x: -2.70000005, y: -2.70000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 450912}
@@ -115,9 +115,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -.100000001}
   serializedVersion: 2
-  m_Size: {x: 4.96000004, y: 2.07999992}
+  m_Size: {x: 5, y: 1.20000005}
 --- !u!95 &9547398
 Animator:
   serializedVersion: 3
@@ -149,16 +149,15 @@ MonoBehaviour:
   points: 0
   speed: 500
   Xmin: -17
-  Xmax: 17
+  Xmax: 12
   Ymin: -9.30000019
   Ymax: 9.30000019
   YAttack: 5
   YStopZone: -5
   timerDown: 1
-  localSigne: {fileID: 114588}
-  Cam: {fileID: 114790, guid: 61adac881583d0543970c04c111fa482, type: 2}
   fienteOutput: {fileID: 132242}
   fiente: {fileID: 173336, guid: e759db319ea037440b378ce9354604a1, type: 2}
+  numPlayer: 0
 --- !u!212 &21268606
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -280,6 +279,10 @@ Prefab:
       propertyPath: fienteOutput
       value: 
       objectReference: {fileID: 132242}
+    - target: {fileID: 0}
+      propertyPath: fiente
+      value: 
+      objectReference: {fileID: 173336, guid: e759db319ea037440b378ce9354604a1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103684}

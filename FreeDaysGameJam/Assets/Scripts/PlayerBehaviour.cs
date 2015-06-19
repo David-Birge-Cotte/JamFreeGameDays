@@ -4,20 +4,16 @@ using System.Collections;
 public class PlayerBehaviour : MonoBehaviour {
 
 	public int points;
-
-
 	public float speed = 500;
 
 	public float Xmin = -17f;
-	public float Xmax = 17f;
+	public float Xmax = 12f;
 	public float Ymin = -9.3f;
 	public float Ymax = 9.3f;
 
 	public float YAttack = 5f;
 	public float YStopZone = -5f;
 	public float timerDown = 1f;
-	public GameObject localSigne;
-	public GameObject Cam;
 
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
@@ -30,6 +26,9 @@ public class PlayerBehaviour : MonoBehaviour {
 	public GameObject fienteOutput;
 	public GameObject fiente;
 
+	private float timerCaca = 1f;
+
+	private Color couleur;
 
 	private enum PositionLayer{
 		UP,
@@ -50,18 +49,9 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	void Start () 
 	{
+		couleur = GetComponent<SpriteRenderer>().color;
+
 		_anim = GetComponent<Animator>();
-
-		/*
-		Color newColor = new Color();
-
-		newColor.r = Random.Range(0.5f, 1f);
-		newColor.g = Random.Range(0.5f, 1f);
-		newColor.b = Random.Range(0.5f, 1f);
-		newColor.a = 1;
-
-		transform.GetComponent<SpriteRenderer>().color = newColor;
-		 */
 
 		_rigidbody = transform.GetComponent<Rigidbody2D>();
 		_velocity = Vector2.zero;
@@ -69,6 +59,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	void Update () 
 	{
+		if(timerCaca > 0){
+			timerCaca -= Time.deltaTime;
+		}
+
+
 
 		if(transform.position.y > YAttack)
 			_pos = PositionLayer.UP;
@@ -78,9 +73,6 @@ public class PlayerBehaviour : MonoBehaviour {
 			_pos = PositionLayer.DOWN;
 		else
 			_pos = PositionLayer.ERROR;
-
-		
-
 
 		if(_pos == PositionLayer.DOWN)
 		{
@@ -95,16 +87,51 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		if(_pos == PositionLayer.UP){
 			_isGoingUp = false;
-			_isAttacking = false;
+			//_isAttacking = false;
 		}
-
-		if(Input.GetKey(KeyCode.Joystick1Button0) || _pos == PositionLayer.MIDDLE)
+		if(numPlayer == Player.J1)
 		{
-			if(_isGoingUp == false && timerDown == 1){
-				_isAttacking = true;
+			if(Input.GetKeyDown(KeyCode.Joystick1Button0))
+			{
+				if(_isGoingUp == false && timerDown == 1){
+					_isAttacking = true;
+				}
+				if(_isAttacking == false){
+					timerDown = 0;
+				}
 			}
-			if(_isAttacking == false){
-				timerDown = 0;
+		} else if(numPlayer == Player.J2)
+		{
+			if(Input.GetKeyDown(KeyCode.Joystick2Button0))
+			{
+				if(_isGoingUp == false && timerDown == 1){
+					_isAttacking = true;
+				}
+				if(_isAttacking == false){
+					timerDown = 0;
+				}
+			}
+		}else if(numPlayer == Player.J3)
+		{
+			if(Input.GetKeyDown(KeyCode.Joystick3Button0))
+			{
+				if(_isGoingUp == false && timerDown == 1){
+					_isAttacking = true;
+				}
+				if(_isAttacking == false){
+					timerDown = 0;
+				}
+			}
+		}else if(numPlayer == Player.J4)
+		{
+			if(Input.GetKeyDown(KeyCode.Joystick4Button0))
+			{
+				if(_isGoingUp == false && timerDown == 1){
+					_isAttacking = true;
+				}
+				if(_isAttacking == false){
+					timerDown = 0;
+				}
 			}
 		}
 		
@@ -141,7 +168,6 @@ public class PlayerBehaviour : MonoBehaviour {
 			break;
 		}
 
-
 		if(_velocity.x > 0 && transform.position.x >= Xmax)
 			_velocity.x = 0;
 		else if(_velocity.x < 0 && transform.position.x <= Xmin)
@@ -152,10 +178,11 @@ public class PlayerBehaviour : MonoBehaviour {
 		else if(_velocity.y < 0 && transform.position.y <= Ymin)
 			_velocity.y = 0;
 
+		if(_velocity.y < 0 && transform.position.y < YAttack+0.2f && _pos == PositionLayer.UP && !_isAttacking)
+			_velocity.y = 0;
 
 		_velocity *= speed * Time.deltaTime;
 		_rigidbody.velocity = _velocity;
-
 
 		if(_isAttacking){
 			_anim.SetBool("isAttacking", true);
@@ -165,11 +192,26 @@ public class PlayerBehaviour : MonoBehaviour {
 			transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 
-		if(Input.GetKeyDown(KeyCode.Joystick1Button1))
+		if(Input.GetKeyDown(KeyCode.Joystick1Button1) && numPlayer == Player.J1 && timerCaca <= 0)
 		{
 			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
+		} 
+		else if(Input.GetKeyDown(KeyCode.Joystick2Button1) && numPlayer == Player.J2 && timerCaca <= 0)
+		{
+			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
+		} 
+		else if(Input.GetKeyDown(KeyCode.Joystick3Button1) && numPlayer == Player.J3 && timerCaca <= 0)
+		{
+			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
+		} 
+		else if(Input.GetKeyDown(KeyCode.Joystick4Button1) && numPlayer == Player.J4 && timerCaca <= 0)
+		{
+			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
 		}
-
 	}
 
 	void GetPoints(int pts)
@@ -178,12 +220,14 @@ public class PlayerBehaviour : MonoBehaviour {
 	}
 
 	public void HitByFiente(){
-		speed = 50;
+		speed = 200;
+		GetComponent<SpriteRenderer>().color = Color.grey;
 		Invoke("resetSpeed", 5f);
 	}
 
 	void resetSpeed(){
 		speed = 500;
+		GetComponent<SpriteRenderer>().color = couleur;
 	}
 }
 
