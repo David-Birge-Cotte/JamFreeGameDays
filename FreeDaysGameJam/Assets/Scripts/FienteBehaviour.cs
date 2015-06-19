@@ -20,7 +20,6 @@ public class FienteBehaviour : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player"){
 			coll.gameObject.SendMessage("HitByFiente");
-			Destroy(coll.gameObject);
 		}
 	}
 }
