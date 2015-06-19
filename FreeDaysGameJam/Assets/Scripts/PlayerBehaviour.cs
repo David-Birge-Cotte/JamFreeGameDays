@@ -28,6 +28,8 @@ public class PlayerBehaviour : MonoBehaviour {
 	public GameObject fienteOutput;
 	public GameObject fiente;
 
+	private Color couleur;
+
 	private enum PositionLayer{
 		UP,
 		MIDDLE,
@@ -47,6 +49,8 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	void Start () 
 	{
+		couleur = GetComponent<SpriteRenderer>().color;
+
 		_anim = GetComponent<Animator>();
 
 		_rigidbody = transform.GetComponent<Rigidbody2D>();
@@ -208,11 +212,13 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	public void HitByFiente(){
 		speed = 50;
+		GetComponent<SpriteRenderer>().color = Color.grey;
 		Invoke("resetSpeed", 5f);
 	}
 
 	void resetSpeed(){
 		speed = 500;
+		GetComponent<SpriteRenderer>().color = couleur;
 	}
 }
 
