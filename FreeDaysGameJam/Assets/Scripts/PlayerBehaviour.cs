@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
 
-public class PlayerBehaviour : NetworkBehaviour {
+public class PlayerBehaviour : MonoBehaviour {
 
 	public int points;
 
@@ -44,13 +43,6 @@ public class PlayerBehaviour : NetworkBehaviour {
 	
 	void Start () 
 	{
-		if(isLocalPlayer){
-			localSigne.SetActive(true);
-			//Camera.main.enabled = false;
-			//GameObject _cam = (GameObject)Instantiate(Cam, Vector3.zero, Quaternion.identity);
-			//_cam.GetComponent<CameraBehaviour>().target = transform.gameObject;
-		}
-
 
 
 		_anim = GetComponent<Animator>();

@@ -11,8 +11,6 @@ GameObject:
   - 212: {fileID: 21280344}
   - 61: {fileID: 6137098}
   - 50: {fileID: 5011830}
-  - 114: {fileID: 11430144}
-  - 114: {fileID: 11463240}
   - 114: {fileID: 11460666}
   - 114: {fileID: 11488694}
   m_Layer: 0
@@ -63,38 +61,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5.11999989, y: 5.11999989}
---- !u!114 &11430144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 8
-    i1: 172
-    i2: 72
-    i3: 159
-    i4: 65
-    i5: 252
-    i6: 193
-    i7: 36
-    i8: 139
-    i9: 50
-    i10: 119
-    i11: 26
-    i12: 50
-    i13: 72
-    i14: 176
-    i15: 77
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &11460666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,26 +73,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsReceived: 150
---- !u!114 &11463240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 2
-  m_SendInterval: .100000001
-  m_SyncRotationAxis: 3
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: .00100000005
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &11488694
 MonoBehaviour:
   m_ObjectHideFlags: 1

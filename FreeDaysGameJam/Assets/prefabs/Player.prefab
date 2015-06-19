@@ -10,11 +10,9 @@ GameObject:
   - 4: {fileID: 450912}
   - 212: {fileID: 21280960}
   - 95: {fileID: 9547398}
-  - 114: {fileID: 11456446}
   - 50: {fileID: 5030670}
   - 61: {fileID: 6158914}
   - 114: {fileID: 11496016}
-  - 114: {fileID: 11498302}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -137,38 +135,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11456446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 44
-    i1: 207
-    i2: 81
-    i3: 198
-    i4: 60
-    i5: 97
-    i6: 59
-    i7: 68
-    i8: 218
-    i9: 186
-    i10: 100
-    i11: 162
-    i12: 121
-    i13: 162
-    i14: 132
-    i15: 99
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &11496016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,26 +159,6 @@ MonoBehaviour:
   Cam: {fileID: 114790, guid: 61adac881583d0543970c04c111fa482, type: 2}
   fienteOutput: {fileID: 132242}
   fiente: {fileID: 173336, guid: e759db319ea037440b378ce9354604a1, type: 2}
---- !u!114 &11498302
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 2
-  m_SendInterval: .0500000007
-  m_SyncRotationAxis: 3
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: .00100000005
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!212 &21268606
 SpriteRenderer:
   m_ObjectHideFlags: 1
