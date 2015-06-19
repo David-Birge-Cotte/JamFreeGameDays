@@ -7,7 +7,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float speed = 500;
 
 	public float Xmin = -17f;
-	public float Xmax = 12f;
+	public float Xmax = 10f;
 	public float Ymin = -9.3f;
 	public float Ymax = 9.3f;
 
@@ -26,9 +26,12 @@ public class PlayerBehaviour : MonoBehaviour {
 	public GameObject fienteOutput;
 	public GameObject fiente;
 
-	private float timerCaca = 1f;
+	private float timerCaca = 0.5f;
 
 	private Color couleur;
+
+	public GameObject manager;
+	private Manager manag;
 
 	private enum PositionLayer{
 		UP,
@@ -49,6 +52,9 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	void Start () 
 	{
+		manag = manager.GetComponent<Manager>();
+
+
 		couleur = GetComponent<SpriteRenderer>().color;
 
 		_anim = GetComponent<Animator>();
@@ -61,6 +67,24 @@ public class PlayerBehaviour : MonoBehaviour {
 	{
 		if(timerCaca > 0){
 			timerCaca -= Time.deltaTime;
+		}
+
+
+		switch (numPlayer) {
+		case Player.J1 :
+			manag.blancScore = points;
+			break;
+		case Player.J2:
+			manag.vertScore = points;
+			break;
+		case Player.J3 :
+			manag.roseScore = points;
+			break;
+		case Player.J4:
+			manag.bleuScore = points;
+			break;
+		default:
+			break;
 		}
 
 
@@ -148,7 +172,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 
 		if(_isGoingUp){
-			_velocity += new Vector2(0, 2);
+			_velocity += new Vector2(-2, 2);
 		}
 		switch (numPlayer) {
 		case Player.J1 :
@@ -222,7 +246,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	public void HitByFiente(){
 		speed = 200;
 		GetComponent<SpriteRenderer>().color = Color.grey;
-		Invoke("resetSpeed", 5f);
+		Invoke("resetSpeed", 2f);
 	}
 
 	void resetSpeed(){

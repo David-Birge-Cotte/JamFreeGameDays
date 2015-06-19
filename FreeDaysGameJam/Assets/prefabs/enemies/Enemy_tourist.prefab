@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11460666}
   - 114: {fileID: 11488694}
   m_Layer: 0
-  m_Name: Enemy_Tourist
+  m_Name: Enemy_tourist
   m_TagString: ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.22000015, y: 3.14000034}
+  m_Size: {x: 1.91000009, y: 3}
 --- !u!95 &9532992
 Animator:
   serializedVersion: 3
