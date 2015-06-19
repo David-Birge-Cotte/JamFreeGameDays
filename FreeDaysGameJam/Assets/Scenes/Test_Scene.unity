@@ -760,6 +760,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1565240841}
   - 61: {fileID: 1565240840}
+  - 114: {fileID: 1565240842}
   m_Layer: 0
   m_Name: Destructor
   m_TagString: Untagged
@@ -775,7 +776,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1565240839}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -792,6 +793,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1565240842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565240839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde8992967761d14a9c4e1598631f15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1666860698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocs:
   - {fileID: 144876, guid: 675d18ae3bf485045bcc6ba773eddb47, type: 2}
-  - {fileID: 144876, guid: 08ac489f41fcc1248b32771a3248b04d, type: 2}
   - {fileID: 144876, guid: bba3870ba5d89584f8a6fbfe8a112683, type: 2}
   - {fileID: 144876, guid: fa861880754d79b4c8cb5fdcfe0ab2fe, type: 2}
 --- !u!4 &2116439609
