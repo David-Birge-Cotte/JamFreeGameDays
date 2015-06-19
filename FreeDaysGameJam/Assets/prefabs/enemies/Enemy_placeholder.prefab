@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a00f53dacd3b419dc69b485107adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sang: {fileID: 120172, guid: 6324db5fcdc213849878039bf884de81, type: 2}
   pointsReceived: 150
 --- !u!114 &11488694
 MonoBehaviour:
@@ -84,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46a228326fac3f43a79ddbf2a09ff66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -2
+  speed: -3.5
 --- !u!212 &21280344
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,6 +127,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: pointsReceived
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sang
+      value: 
+      objectReference: {fileID: 120172, guid: 6324db5fcdc213849878039bf884de81, type: 2}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: -3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

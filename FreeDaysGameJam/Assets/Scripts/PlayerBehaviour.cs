@@ -7,15 +7,13 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float speed = 500;
 
 	public float Xmin = -17f;
-	public float Xmax = 17f;
+	public float Xmax = 12f;
 	public float Ymin = -9.3f;
 	public float Ymax = 9.3f;
 
 	public float YAttack = 5f;
 	public float YStopZone = -5f;
 	public float timerDown = 1f;
-	public GameObject localSigne;
-	public GameObject Cam;
 
 	private Rigidbody2D _rigidbody;
 	private Vector2 _velocity;
@@ -27,6 +25,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	public GameObject fienteOutput;
 	public GameObject fiente;
+
+	private float timerCaca = 1f;
 
 	private Color couleur;
 
@@ -59,6 +59,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	void Update () 
 	{
+		if(timerCaca > 0){
+			timerCaca -= Time.deltaTime;
+		}
+
+
 
 		if(transform.position.y > YAttack)
 			_pos = PositionLayer.UP;
@@ -187,21 +192,25 @@ public class PlayerBehaviour : MonoBehaviour {
 			transform.eulerAngles = new Vector3(0, 0, 0);
 		}
 
-		if(Input.GetKeyDown(KeyCode.Joystick1Button1) && numPlayer == Player.J1)
+		if(Input.GetKeyDown(KeyCode.Joystick1Button1) && numPlayer == Player.J1 && timerCaca <= 0)
 		{
 			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
 		} 
-		else if(Input.GetKeyDown(KeyCode.Joystick2Button1) && numPlayer == Player.J2)
+		else if(Input.GetKeyDown(KeyCode.Joystick2Button1) && numPlayer == Player.J2 && timerCaca <= 0)
 		{
 			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
 		} 
-		else if(Input.GetKeyDown(KeyCode.Joystick3Button1) && numPlayer == Player.J3)
+		else if(Input.GetKeyDown(KeyCode.Joystick3Button1) && numPlayer == Player.J3 && timerCaca <= 0)
 		{
 			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
 		} 
-		else if(Input.GetKeyDown(KeyCode.Joystick4Button1) && numPlayer == Player.J4)
+		else if(Input.GetKeyDown(KeyCode.Joystick4Button1) && numPlayer == Player.J4 && timerCaca <= 0)
 		{
 			Instantiate(fiente, fienteOutput.transform.position, Quaternion.identity);
+			timerCaca = 1f;
 		}
 	}
 
@@ -211,7 +220,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	}
 
 	public void HitByFiente(){
-		speed = 50;
+		speed = 200;
 		GetComponent<SpriteRenderer>().color = Color.grey;
 		Invoke("resetSpeed", 5f);
 	}

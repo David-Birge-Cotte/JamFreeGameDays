@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: d36a00f53dacd3b419dc69b485107adf
-timeCreated: 1434705105
+guid: 4a3924e35febb4748b3c0b2cf58e8cef
+timeCreated: 1434704814
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - sang: {fileID: 120172, guid: 6324db5fcdc213849878039bf884de81, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

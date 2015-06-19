@@ -9,13 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 492028}
   - 212: {fileID: 21280344}
-  - 95: {fileID: 9532992}
   - 61: {fileID: 6137098}
   - 50: {fileID: 5011830}
   - 114: {fileID: 11460666}
   - 114: {fileID: 11488694}
   m_Layer: 0
-  m_Name: Enemy_ballon
+  m_Name: Enemy_Yoga
   m_TagString: ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,23 +61,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.47000003, y: 1.46000004}
---- !u!95 &9532992
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144876}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4339cce8e1c084c4f8f7d39e4aaa338c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11460666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b119a4e60270ce438acc2bf7d3c1943, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0c7438aa84c54741a9671bc6007011b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -140,7 +122,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7b119a4e60270ce438acc2bf7d3c1943,
+      objectReference: {fileID: 21300000, guid: e0c7438aa84c54741a9671bc6007011b,
         type: 3}
     - target: {fileID: 0}
       propertyPath: pointsReceived

@@ -149,14 +149,12 @@ MonoBehaviour:
   points: 0
   speed: 500
   Xmin: -17
-  Xmax: 17
+  Xmax: 12
   Ymin: -9.30000019
   Ymax: 9.30000019
   YAttack: 5
   YStopZone: -5
   timerDown: 1
-  localSigne: {fileID: 114588}
-  Cam: {fileID: 114790, guid: 61adac881583d0543970c04c111fa482, type: 2}
   fienteOutput: {fileID: 132242}
   fiente: {fileID: 173336, guid: e759db319ea037440b378ce9354604a1, type: 2}
   numPlayer: 0
@@ -281,6 +279,10 @@ Prefab:
       propertyPath: fienteOutput
       value: 
       objectReference: {fileID: 132242}
+    - target: {fileID: 0}
+      propertyPath: fiente
+      value: 
+      objectReference: {fileID: 173336, guid: e759db319ea037440b378ce9354604a1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103684}
