@@ -65,6 +65,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	void Update () 
 	{
+		//débug pour la zone à gauche
+		if(transform.position.x < Xmin)
+			transform.position = new Vector3(Xmin+3, Ymax-3, 1);
+
+
 		if(timerCaca > 0){
 			timerCaca -= Time.deltaTime;
 		}

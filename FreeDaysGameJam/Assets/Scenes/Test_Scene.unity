@@ -278,7 +278,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -100
+  m_SortingOrder: -110
   m_Sprite: {fileID: 21300000, guid: 3a4db263ba9b8b14690814375e9ed768, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &419928482
@@ -954,8 +954,8 @@ MonoBehaviour:
   roseScore: 0
   blancScoreUI: {fileID: 1403222296}
   vertScoreUI: {fileID: 1257844546}
-  bleuScoreUI: {fileID: 2036817653}
-  roseScoreUI: {fileID: 1862199214}
+  bleuScoreUI: {fileID: 1862199214}
+  roseScoreUI: {fileID: 2036817653}
 --- !u!1001 &1397683640
 Prefab:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468298, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 193498, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: m_Name
@@ -1374,7 +1374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468298, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 193498, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: m_Name
@@ -1531,7 +1531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468298, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11452000, guid: d9ee6ac9bbf606d48b74dcbea5be0ff6, type: 2}
       propertyPath: destructor
@@ -1792,3 +1792,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Beach: {fileID: 159264, guid: 427fb836703308540b0f6a778aa697d4, type: 2}
   Sea01: {fileID: 133080, guid: 4043231d06600d44dad9d3c763eaec75, type: 2}
+  TransitionBeachToSea: {fileID: 133080, guid: c30b28cd07f3f154bae6d7446a5225ff, type: 2}
+  TransitionSeaToBeach: {fileID: 133080, guid: e000d8e85da12f147bb74192b58beabb, type: 2}
